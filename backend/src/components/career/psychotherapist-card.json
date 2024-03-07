@@ -1,0 +1,35 @@
+{
+  "collectionName": "components_career_psychotherapist_cards",
+  "info": {
+    "displayName": "psychotherapistCard",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "location": {
+      "type": "string"
+    },
+    "ctaName": {
+      "type": "string"
+    },
+    "ctaLink": {
+      "type": "string"
+    },
+    "img": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": false
+    },
+    "description": {
+      "type": "text"
+    }
+  }
+}

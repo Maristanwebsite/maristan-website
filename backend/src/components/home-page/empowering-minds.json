@@ -1,0 +1,41 @@
+{
+  "collectionName": "components_home_page_empowering_minds",
+  "info": {
+    "displayName": "empoweringMinds",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "cards": {
+      "displayName": "empoweringCard",
+      "type": "component",
+      "repeatable": true,
+      "component": "home-page.empowering-card"
+    },
+    "heading": {
+      "type": "component",
+      "repeatable": false,
+      "component": "common.heading-bar"
+    },
+    "imageLeft": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": false
+    },
+    "imageBottom": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": false
+    }
+  }
+}

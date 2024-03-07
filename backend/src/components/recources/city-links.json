@@ -1,0 +1,15 @@
+{
+  "collectionName": "components_recources_city_links",
+  "info": {
+    "displayName": "cityLinks"
+  },
+  "options": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "link": {
+      "type": "text"
+    }
+  }
+}

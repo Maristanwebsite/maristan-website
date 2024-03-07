@@ -1,0 +1,28 @@
+{
+  "collectionName": "components_about_page_history_maristans",
+  "info": {
+    "displayName": "historyMaristan"
+  },
+  "options": {},
+  "attributes": {
+    "heading": {
+      "type": "component",
+      "repeatable": false,
+      "component": "common.heading-bar"
+    },
+    "description": {
+      "type": "text"
+    },
+    "values": {
+      "type": "component",
+      "repeatable": true,
+      "component": "home-page.our-value"
+    },
+    "description2": {
+      "type": "richtext"
+    },
+    "url": {
+      "type": "string"
+    }
+  }
+}

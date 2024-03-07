@@ -1,0 +1,41 @@
+{
+  "collectionName": "components_home_page_event_cards",
+  "info": {
+    "displayName": "eventCard",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "date": {
+      "type": "string"
+    },
+    "title": {
+      "type": "string"
+    },
+    "tagline": {
+      "type": "string"
+    },
+    "location": {
+      "type": "string"
+    },
+    "time": {
+      "type": "string"
+    },
+    "ctaName": {
+      "type": "string"
+    },
+    "ctaLink": {
+      "type": "string"
+    },
+    "img": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": false
+    }
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "collectionName": "components_recources_education_city_links",
+  "info": {
+    "displayName": "EducationCityLinks"
+  },
+  "options": {},
+  "attributes": {
+    "countryname": {
+      "type": "string"
+    },
+    "flag": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": false
+    },
+    "cityName": {
+      "displayName": "cityname",
+      "type": "component",
+      "repeatable": true,
+      "component": "recources.cityname"
+    }
+  }
+}

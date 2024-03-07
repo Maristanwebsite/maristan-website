@@ -1,0 +1,28 @@
+{
+  "collectionName": "components_site_navbars",
+  "info": {
+    "displayName": "Navbar"
+  },
+  "options": {},
+  "attributes": {
+    "navItems": {
+      "displayName": "navItems",
+      "type": "component",
+      "repeatable": true,
+      "component": "site.nav-items"
+    },
+    "btnName": {
+      "type": "string"
+    },
+    "logo": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": false
+    }
+  }
+}

@@ -1,0 +1,50 @@
+{
+  "collectionName": "components_home_page_our_missions",
+  "info": {
+    "displayName": "ourMission",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "image": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "description": {
+      "type": "richtext"
+    },
+    "percent": {
+      "displayName": "percentsBox",
+      "type": "component",
+      "repeatable": true,
+      "component": "home-page.percents-box"
+    },
+    "cta": {
+      "type": "component",
+      "repeatable": true,
+      "component": "common.cta"
+    },
+    "heading": {
+      "type": "component",
+      "repeatable": false,
+      "component": "common.heading-bar"
+    },
+    "backgroundImage": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": false
+    }
+  }
+}

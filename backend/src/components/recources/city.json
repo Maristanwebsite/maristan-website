@@ -1,0 +1,22 @@
+{
+  "collectionName": "components_recources_cities",
+  "info": {
+    "displayName": "City",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "cityname": {
+      "type": "string"
+    },
+    "cityLinks": {
+      "displayName": "cityLinks",
+      "type": "component",
+      "repeatable": true,
+      "component": "recources.city-links"
+    },
+    "countryname": {
+      "type": "string"
+    }
+  }
+}

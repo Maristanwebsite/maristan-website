@@ -1,0 +1,39 @@
+{
+  "collectionName": "components_common_apportments",
+  "info": {
+    "displayName": "Apportment",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "string"
+    },
+    "tagline": {
+      "type": "string"
+    },
+    "appotment": {
+      "type": "component",
+      "repeatable": false,
+      "component": "common.cta"
+    },
+    "call": {
+      "type": "component",
+      "repeatable": false,
+      "component": "common.cta"
+    },
+    "backgroundImage": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": false
+    }
+  }
+}

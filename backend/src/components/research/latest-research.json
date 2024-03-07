@@ -1,0 +1,23 @@
+{
+  "collectionName": "components_research_latest_researches",
+  "info": {
+    "displayName": "LatestResearch"
+  },
+  "options": {},
+  "attributes": {
+    "HeadingBar": {
+      "type": "component",
+      "repeatable": false,
+      "component": "common.heading-bar"
+    },
+    "heading": {
+      "type": "string"
+    },
+    "ResearchData": {
+      "displayName": "ResearchData",
+      "type": "component",
+      "repeatable": true,
+      "component": "research.research-data"
+    }
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "collectionName": "components_recources_general_links",
+  "info": {
+    "displayName": "GeneralLinks"
+  },
+  "options": {},
+  "attributes": {
+    "cityName": {
+      "type": "string"
+    },
+    "cityLinkss": {
+      "type": "component",
+      "repeatable": true,
+      "component": "common.cta"
+    }
+  }
+}

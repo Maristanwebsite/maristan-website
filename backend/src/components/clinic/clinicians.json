@@ -1,0 +1,33 @@
+{
+  "collectionName": "components_clinic_clinicians",
+  "info": {
+    "displayName": "Clinicians",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "image": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "tagline": {
+      "type": "text"
+    },
+    "description": {
+      "type": "text"
+    },
+    "modalDescription": {
+      "type": "richtext"
+    }
+  }
+}

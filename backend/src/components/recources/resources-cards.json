@@ -1,0 +1,20 @@
+{
+  "collectionName": "components_recources_resources_cards",
+  "info": {
+    "displayName": "Resources Cards"
+  },
+  "options": {},
+  "attributes": {
+    "headingBar": {
+      "type": "component",
+      "repeatable": false,
+      "component": "common.heading-bar"
+    },
+    "EducationalResourcesCards": {
+      "displayName": "EducationalResourcesCards",
+      "type": "component",
+      "repeatable": true,
+      "component": "recources.educational-resources-cards"
+    }
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "collectionName": "components_research_research_data",
+  "info": {
+    "displayName": "ResearchData"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "tagline": {
+      "type": "string"
+    },
+    "link": {
+      "type": "string"
+    }
+  }
+}

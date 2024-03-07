@@ -1,0 +1,12 @@
+{
+  "collectionName": "components_home_page_our_values",
+  "info": {
+    "displayName": "ourValue"
+  },
+  "options": {},
+  "attributes": {
+    "value": {
+      "type": "string"
+    }
+  }
+}

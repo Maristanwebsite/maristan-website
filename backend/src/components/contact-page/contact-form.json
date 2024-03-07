@@ -1,0 +1,42 @@
+{
+  "collectionName": "components_contact_page_contact_forms",
+  "info": {
+    "displayName": "contactForm"
+  },
+  "options": {},
+  "attributes": {
+    "heading": {
+      "type": "string"
+    },
+    "tagline": {
+      "type": "string"
+    },
+    "paragraph": {
+      "type": "string"
+    },
+    "subHeading": {
+      "type": "string"
+    },
+    "callCta": {
+      "displayName": "imageCta",
+      "type": "component",
+      "repeatable": false,
+      "component": "common.image-cta"
+    },
+    "location": {
+      "type": "component",
+      "repeatable": false,
+      "component": "common.image-cta"
+    },
+    "mail": {
+      "type": "component",
+      "repeatable": false,
+      "component": "common.image-cta"
+    },
+    "socialLinks": {
+      "type": "component",
+      "repeatable": true,
+      "component": "common.image-cta"
+    }
+  }
+}

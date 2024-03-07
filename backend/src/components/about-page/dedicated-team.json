@@ -1,0 +1,20 @@
+{
+  "collectionName": "components_about_page_dedicated_teams",
+  "info": {
+    "displayName": "dedicatedTeam"
+  },
+  "options": {},
+  "attributes": {
+    "heading": {
+      "type": "component",
+      "repeatable": false,
+      "component": "common.heading-bar"
+    },
+    "card": {
+      "displayName": "teamCard",
+      "type": "component",
+      "repeatable": true,
+      "component": "about-page.team-card"
+    }
+  }
+}

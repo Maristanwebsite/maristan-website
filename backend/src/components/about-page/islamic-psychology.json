@@ -1,0 +1,32 @@
+{
+  "collectionName": "components_about_page_islamic_psychologies",
+  "info": {
+    "displayName": "islamicPsychology",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "heading": {
+      "type": "component",
+      "repeatable": false,
+      "component": "common.heading-bar"
+    },
+    "image": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "list": {
+      "displayName": "aboutList",
+      "type": "component",
+      "repeatable": true,
+      "component": "about-us.about-list"
+    }
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "collectionName": "components_recources_country_links",
+  "info": {
+    "displayName": "Country Links"
+  },
+  "options": {},
+  "attributes": {
+    "flag": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": false
+    },
+    "countryName": {
+      "type": "string"
+    },
+    "cityName": {
+      "type": "string"
+    }
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "collectionName": "components_career_psychotherapists",
+  "info": {
+    "displayName": "Psychotherapist",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "heading": {
+      "type": "component",
+      "repeatable": false,
+      "component": "common.heading-bar"
+    },
+    "card": {
+      "displayName": "psychotherapistCard",
+      "type": "component",
+      "repeatable": true,
+      "component": "career.psychotherapist-card"
+    }
+  }
+}

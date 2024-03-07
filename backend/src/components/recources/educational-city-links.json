@@ -1,0 +1,15 @@
+{
+  "collectionName": "components_recources_educational_city_links",
+  "info": {
+    "displayName": "educationalCityLinks"
+  },
+  "options": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "link": {
+      "type": "string"
+    }
+  }
+}

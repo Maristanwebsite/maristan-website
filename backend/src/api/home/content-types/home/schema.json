@@ -1,0 +1,32 @@
+{
+  "kind": "singleType",
+  "collectionName": "homes",
+  "info": {
+    "singularName": "home",
+    "pluralName": "homes",
+    "displayName": "Home",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "home_page": {
+      "type": "dynamiczone",
+      "components": [
+        "home-page.hero",
+        "home-page.upcomming-events",
+        "common.our-journey",
+        "home-page.our-mission",
+        "home-page.empowering-minds",
+        "home-page.enrich-knowledge",
+        "common.get-in-touch",
+        "home-page.our-team",
+        "common.news-letter",
+        "seo.seo",
+        "common.apportment"
+      ]
+    }
+  }
+}

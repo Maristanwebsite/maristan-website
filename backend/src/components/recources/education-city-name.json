@@ -1,0 +1,39 @@
+{
+  "collectionName": "components_recources_education_city_names",
+  "info": {
+    "displayName": "EducationCityName"
+  },
+  "options": {},
+  "attributes": {
+    "logo": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": false
+    },
+    "countryName": {
+      "type": "string"
+    },
+    "educationCityLinks": {
+      "displayName": "educationalCityLinks",
+      "type": "component",
+      "repeatable": true,
+      "component": "recources.educational-city-links"
+    },
+    "cityName": {
+      "type": "string"
+    },
+    "cityName2": {
+      "type": "string"
+    },
+    "educationCityLinks2": {
+      "type": "component",
+      "repeatable": true,
+      "component": "recources.educational-city-links"
+    }
+  }
+}

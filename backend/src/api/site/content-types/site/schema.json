@@ -1,0 +1,33 @@
+{
+  "kind": "singleType",
+  "collectionName": "sites",
+  "info": {
+    "singularName": "site",
+    "pluralName": "sites",
+    "displayName": "Site"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Navbar": {
+      "displayName": "Navbar",
+      "type": "component",
+      "repeatable": false,
+      "component": "site.navbar"
+    },
+    "Footer": {
+      "displayName": "Footer",
+      "type": "component",
+      "repeatable": false,
+      "component": "site.footer"
+    },
+    "FooterItems": {
+      "displayName": "FooterItems",
+      "type": "component",
+      "repeatable": true,
+      "component": "site.footer-items"
+    }
+  }
+}

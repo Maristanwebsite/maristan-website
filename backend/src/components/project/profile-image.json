@@ -1,0 +1,19 @@
+{
+  "collectionName": "components_project_profile_images",
+  "info": {
+    "displayName": "profile-image"
+  },
+  "options": {},
+  "attributes": {
+    "img": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": false
+    }
+  }
+}

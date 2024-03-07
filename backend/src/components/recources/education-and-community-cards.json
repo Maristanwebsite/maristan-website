@@ -1,0 +1,18 @@
+{
+  "collectionName": "components_recources_education_and_community_cards",
+  "info": {
+    "displayName": "EducationAndCommunityCards"
+  },
+  "options": {},
+  "attributes": {
+    "LinksCards": {
+      "displayName": "Linkscards",
+      "type": "component",
+      "repeatable": true,
+      "component": "recources.linkscards"
+    },
+    "title": {
+      "type": "string"
+    }
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "collectionName": "components_home_page_enrich_knowledges",
+  "info": {
+    "displayName": "enrichKnowledge",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "cards": {
+      "displayName": "resourcesCards",
+      "type": "component",
+      "repeatable": true,
+      "component": "home-page.resources-cards"
+    },
+    "goToEducation": {
+      "type": "component",
+      "repeatable": false,
+      "component": "common.cta"
+    },
+    "heading": {
+      "type": "component",
+      "repeatable": false,
+      "component": "common.heading-bar"
+    }
+  }
+}

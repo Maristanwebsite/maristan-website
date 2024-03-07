@@ -1,0 +1,34 @@
+{
+  "collectionName": "components_project_survey_forms",
+  "info": {
+    "displayName": "SurveyForm"
+  },
+  "options": {},
+  "attributes": {
+    "tagline": {
+      "type": "string"
+    },
+    "title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    },
+    "img": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": false
+    },
+    "subheading": {
+      "type": "string"
+    },
+    "ctaname": {
+      "type": "string"
+    }
+  }
+}

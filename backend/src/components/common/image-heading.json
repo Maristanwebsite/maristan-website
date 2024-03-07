@@ -1,0 +1,25 @@
+{
+  "collectionName": "components_common_image_headings",
+  "info": {
+    "displayName": "ImageHeading"
+  },
+  "options": {},
+  "attributes": {
+    "tagline": {
+      "type": "string"
+    },
+    "headline": {
+      "type": "string"
+    },
+    "image": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": false
+    }
+  }
+}

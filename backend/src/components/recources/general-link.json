@@ -1,0 +1,15 @@
+{
+  "collectionName": "components_recources_general_links",
+  "info": {
+    "displayName": "generalLink"
+  },
+  "options": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "link": {
+      "type": "text"
+    }
+  }
+}

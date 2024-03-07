@@ -1,0 +1,32 @@
+{
+  "kind": "singleType",
+  "collectionName": "researchs",
+  "info": {
+    "singularName": "research",
+    "pluralName": "researchs",
+    "displayName": "Research",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "ResearchPage": {
+      "type": "dynamiczone",
+      "components": [
+        "common.common-hero",
+        "common.news-letter",
+        "project.survey-form",
+        "research.muslim-healthcare",
+        "seo.seo",
+        "research.latest-research"
+      ]
+    },
+    "HeadingBar": {
+      "type": "component",
+      "repeatable": false,
+      "component": "common.image-heading"
+    }
+  }
+}

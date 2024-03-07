@@ -1,0 +1,51 @@
+{
+  "kind": "singleType",
+  "collectionName": "education_and_resources",
+  "info": {
+    "singularName": "education-and-resource",
+    "pluralName": "education-and-resources",
+    "displayName": "Education & Resource",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "educationResources": {
+      "type": "dynamiczone",
+      "components": [
+        "common.apportment-form",
+        "common.common-hero",
+        "recources.clinical-education",
+        "seo.seo"
+      ]
+    },
+    "EducationCards": {
+      "displayName": "EducationCards",
+      "type": "component",
+      "repeatable": false,
+      "component": "recources.education-cards"
+    },
+    "EducationAndCommunityCards": {
+      "type": "component",
+      "repeatable": true,
+      "component": "recources.education-and-community-cards"
+    },
+    "EducationCityNames": {
+      "type": "component",
+      "repeatable": true,
+      "component": "recources.education-city-name"
+    },
+    "EducationGeneralLinks": {
+      "type": "component",
+      "repeatable": false,
+      "component": "recources.education-general-links"
+    },
+    "ResourcesCard": {
+      "type": "component",
+      "repeatable": false,
+      "component": "recources.resources-cards"
+    }
+  }
+}

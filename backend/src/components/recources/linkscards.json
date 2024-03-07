@@ -1,0 +1,18 @@
+{
+  "collectionName": "components_recources_linkscards",
+  "info": {
+    "displayName": "Linkscards"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "tagline": {
+      "type": "string"
+    },
+    "link": {
+      "type": "string"
+    }
+  }
+}

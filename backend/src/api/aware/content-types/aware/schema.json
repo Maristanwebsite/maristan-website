@@ -1,0 +1,50 @@
+{
+  "kind": "singleType",
+  "collectionName": "awares",
+  "info": {
+    "singularName": "aware",
+    "pluralName": "awares",
+    "displayName": "About-Us",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "aware": {
+      "type": "dynamiczone",
+      "components": [
+        "common.common-hero",
+        "common.get-in-touch",
+        "common.news-letter",
+        "seo.seo"
+      ]
+    },
+    "BrighterTomorrow": {
+      "type": "component",
+      "repeatable": false,
+      "component": "about-page.brighter-tomorrow"
+    },
+    "ClinicalTeam": {
+      "type": "component",
+      "repeatable": false,
+      "component": "about-page.clinical-team"
+    },
+    "DedicatedTeam": {
+      "type": "component",
+      "repeatable": false,
+      "component": "about-page.dedicated-team"
+    },
+    "IslamicPsychology": {
+      "type": "component",
+      "repeatable": false,
+      "component": "about-page.islamic-psychology"
+    },
+    "HistoryMaristan": {
+      "type": "component",
+      "repeatable": false,
+      "component": "about-page.history-maristan"
+    }
+  }
+}

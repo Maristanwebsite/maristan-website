@@ -1,0 +1,64 @@
+{
+  "collectionName": "components_home_page_heroes",
+  "info": {
+    "displayName": "hero",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    },
+    "tagline": {
+      "type": "string"
+    },
+    "cta": {
+      "displayName": "cta",
+      "type": "component",
+      "repeatable": true,
+      "component": "common.cta"
+    },
+    "image": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "bottomImage": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "icon": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "cardsButton": {
+      "displayName": "BottonCards",
+      "type": "component",
+      "repeatable": true,
+      "component": "common.botton-cards"
+    }
+  }
+}

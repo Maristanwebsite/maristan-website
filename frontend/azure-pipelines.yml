@@ -1,0 +1,187 @@
+# Docker
+# Build and push an image to Azure Container Registry
+# https://docs.microsoft.com/azure/devops/pipelines/languages/docker
+
+trigger:
+  branches:
+    include:
+      - main
+  paths:
+    include:
+      - frontend
+
+resources:
+- repo: self
+
+pool: 
+  vmImage: 'ubuntu-22.04'
+
+variables:
+  rgName: 'rg-maristan'
+  project: 'maristan' 
+  repoName: 'maristan-frontend'
+  workingDirectory: frontend
+  role: frontend
+  # Container registry service connection established during pipeline creation
+  azureRmServiceConnection: 'a009fbc8-8c7e-4862-8f33-fc8397086876'
+  dockerRegistryServiceConnection: 'ca2e995a-8f2a-4e41-9663-83a3819b81c4'
+  containerRegistry: 'vigorant.azurecr.io'
+  dockerfilePath: '$(workingDirectory)/Dockerfile'
+  tag: '$(Build.BuildId)'
+  node_version: '16.19.0'
+
+stages:
+- stage: Staging
+  condition: and(succeeded(), startsWith(variables['Build.SourceBranch'], 'refs/pull/'))
+  displayName: Staging
+
+  jobs:
+  - job: Build
+    displayName: 'Build and push container image'
+      
+    steps:
+
+    - checkout: self
+      submodules: recursive
+
+    - task: NodeTool@0
+      inputs:
+        versionSpec: '$(node_version)'
+      displayName: 'Install Node.js'
+
+    - script: |
+        yarn install --immutable
+      displayName: yarn install --immutable
+      workingDirectory: $(workingDirectory)
+    - script: |
+        npm run build
+      displayName: npm run build
+      workingDirectory: $(workingDirectory)
+      # env:
+      #   APP_KEYS: $(APP_KEYS)
+
+    - task: Docker@2
+      displayName: Build an image
+      inputs:
+        containerRegistry: '$(dockerRegistryServiceConnection)'
+        repository: '$(repoName)-staging'
+        command: 'build'
+        Dockerfile: '$(dockerfilePath)'
+        buildContext: $(workingDirectory)
+        tags: |
+          latest
+          $(tag)
+        arguments: '--build-arg NODE_VERSION=$(node_version)'
+#        env:
+#          DOCKER_BUILDKIT: 1
+
+    - task: Docker@2
+      displayName: Push an image to container registry
+      inputs:
+        containerRegistry: '$(dockerRegistryServiceConnection)'
+        repository: '$(repoName)-staging'
+        command: 'push'
+        tags: |
+          latest
+          $(tag)
+
+  - deployment: DeployPullRequest
+    displayName: 'Deploy'
+    dependsOn: Build
+    environment: '$(role) Staging'
+    strategy:
+      runOnce:
+        deploy:
+          steps:
+          - task: AzureRmWebAppDeployment@4
+            inputs:
+              ConnectionType: 'AzureRM'
+              azureSubscription: '$(azureRmServiceConnection)'
+              appType: 'webAppContainer'
+              WebAppName: '$(project)-$(role)'
+              deployToSlotOrASE: true
+              ResourceGroupName: '$(rgName)'
+              SlotName: 'staging'
+              DockerNamespace: '$(containerRegistry)'
+              DockerRepository: '$(repoName)-staging'
+              DockerImageTag: '$(tag)'
+              AppSettings: '-SITE_URL $(SITE_URL) -STRAPIBASEURL $(STRAPIBASEURL)'
+
+- stage: Production
+  condition: not(startsWith(variables['Build.SourceBranch'], 'refs/pull/'))
+  displayName: Production
+
+  jobs:
+  - job: Build
+    displayName: 'Build and push container image'
+      
+    steps:
+
+    - checkout: self
+      submodules: recursive
+
+    - task: NodeTool@0
+      inputs:
+        versionSpec: '$(node_version)'
+      displayName: 'Install Node.js'
+
+    - script: |
+        yarn install --immutable
+      displayName: yarn install --immutable
+      workingDirectory: $(workingDirectory)
+    - script: |
+        npm run build
+      displayName: npm run build
+      workingDirectory: $(workingDirectory)
+      # env:
+      #   APP_KEYS: $(APP_KEYS)
+
+    - task: Docker@2
+      displayName: Build an image
+      inputs:
+        containerRegistry: '$(dockerRegistryServiceConnection)'
+        repository: '$(repoName)'
+        command: 'build'
+        Dockerfile: '$(dockerfilePath)'
+        buildContext: $(workingDirectory)
+        tags: |
+          latest
+          $(tag)
+        arguments: '--build-arg NODE_VERSION=$(node_version)'
+
+    - task: Docker@2
+      displayName: Push an image to container registry
+      inputs:
+        containerRegistry: '$(dockerRegistryServiceConnection)'
+        repository: '$(repoName)'
+        command: 'push'
+        tags: |
+          latest
+          $(tag)
+
+    - task: AzureCLI@2
+      displayName: Clean up old docker images
+      inputs:
+        azureSubscription: $(azureRmServiceConnection)
+        scriptType: 'pscore'
+        scriptLocation: 'inlineScript'
+        inlineScript: 'az acr run --cmd "acr purge --filter ''$(repoName)-staging:.*'' --ago 30d --untagged" --registry vigorant /dev/null'
+
+  - deployment: Deploy
+    environment: '$(role) Production'
+    dependsOn: Build
+    displayName: Deploy
+    strategy:
+      runOnce:
+        deploy:
+          steps:
+          - task: AzureRmWebAppDeployment@4
+            inputs:
+              ConnectionType: 'AzureRM'
+              azureSubscription: '$(azureRmServiceConnection)'
+              appType: 'webAppContainer'
+              WebAppName: '$(project)-$(role)'
+              DockerNamespace: '$(containerRegistry)'
+              DockerRepository: '$(repoName)'
+              DockerImageTag: '$(tag)'
+              AppSettings: '-SITE_URL $(SITE_URL) -STRAPI_BASE_URL $(STRAPI_BASE_URL)'

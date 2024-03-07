@@ -1,0 +1,19 @@
+{
+  "collectionName": "components_our_project_impactful_projects",
+  "info": {
+    "displayName": "impactfulProject"
+  },
+  "options": {},
+  "attributes": {
+    "heading": {
+      "type": "component",
+      "repeatable": false,
+      "component": "common.heading-bar"
+    },
+    "cards": {
+      "type": "component",
+      "repeatable": true,
+      "component": "home-page.empowering-card"
+    }
+  }
+}

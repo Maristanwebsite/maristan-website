@@ -1,0 +1,28 @@
+{
+  "collectionName": "components_project_support_suicides",
+  "info": {
+    "displayName": "SupportSuicide"
+  },
+  "options": {},
+  "attributes": {
+    "img": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": false
+    },
+    "title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    },
+    "subline": {
+      "type": "text"
+    }
+  }
+}

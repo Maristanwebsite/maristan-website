@@ -1,0 +1,28 @@
+{
+  "collectionName": "components_project_faq_cards",
+  "info": {
+    "displayName": "FaqCards"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "img": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": false
+    },
+    "cards": {
+      "displayName": "cards",
+      "type": "component",
+      "repeatable": true,
+      "component": "project.cards"
+    }
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "collectionName": "components_recources_clinical_educations",
+  "info": {
+    "displayName": "ClinicalEducation"
+  },
+  "options": {},
+  "attributes": {
+    "tagline": {
+      "type": "string"
+    },
+    "title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    }
+  }
+}

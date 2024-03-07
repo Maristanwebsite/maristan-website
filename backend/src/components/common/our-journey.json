@@ -1,0 +1,62 @@
+{
+  "collectionName": "components_home_page_our_journeys",
+  "info": {
+    "displayName": "ourJourney",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "image": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "quote": {
+      "type": "string"
+    },
+    "valueTitle": {
+      "type": "string"
+    },
+    "values": {
+      "type": "component",
+      "repeatable": true,
+      "component": "home-page.our-value"
+    },
+    "user": {
+      "displayName": "user",
+      "type": "component",
+      "repeatable": false,
+      "component": "home-page.user"
+    },
+    "learnMore": {
+      "type": "component",
+      "repeatable": false,
+      "component": "common.cta"
+    },
+    "heading": {
+      "type": "component",
+      "repeatable": false,
+      "component": "common.heading-bar"
+    },
+    "backgroundImage": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "description": {
+      "type": "richtext"
+    }
+  }
+}

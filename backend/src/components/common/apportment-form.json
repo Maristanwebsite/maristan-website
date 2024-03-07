@@ -1,0 +1,33 @@
+{
+  "collectionName": "components_common_apportment_forms",
+  "info": {
+    "displayName": "ApportmentForm"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "tagline": {
+      "type": "string"
+    },
+    "description": {
+      "type": "string"
+    },
+    "img": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": false
+    },
+    "cta": {
+      "type": "component",
+      "repeatable": true,
+      "component": "common.cta"
+    }
+  }
+}

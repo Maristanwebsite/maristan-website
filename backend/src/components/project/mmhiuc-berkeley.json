@@ -1,0 +1,33 @@
+{
+  "collectionName": "components_project_mmhiuc_berkelies",
+  "info": {
+    "displayName": "MmhiucBerkeley"
+  },
+  "options": {},
+  "attributes": {
+    "tagline": {
+      "type": "string"
+    },
+    "title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    },
+    "cta": {
+      "type": "component",
+      "repeatable": true,
+      "component": "common.cta"
+    },
+    "img": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": false
+    }
+  }
+}

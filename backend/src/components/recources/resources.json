@@ -1,0 +1,26 @@
+{
+  "collectionName": "components_recources_resources",
+  "info": {
+    "displayName": "Resources"
+  },
+  "options": {},
+  "attributes": {
+    "tagline": {
+      "type": "string"
+    },
+    "title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    },
+    "GeneralClinicTitle": {
+      "type": "string"
+    },
+    "GeneralLinks": {
+      "type": "component",
+      "repeatable": true,
+      "component": "common.cta"
+    }
+  }
+}

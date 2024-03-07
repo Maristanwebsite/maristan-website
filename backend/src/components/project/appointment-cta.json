@@ -1,0 +1,23 @@
+{
+  "collectionName": "components_project_appointment_ctas",
+  "info": {
+    "displayName": "AppointmentCta"
+  },
+  "options": {},
+  "attributes": {
+    "tagline": {
+      "type": "string"
+    },
+    "title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    },
+    "cta": {
+      "type": "component",
+      "repeatable": false,
+      "component": "common.cta"
+    }
+  }
+}

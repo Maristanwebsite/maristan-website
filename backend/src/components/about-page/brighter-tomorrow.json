@@ -1,0 +1,37 @@
+{
+  "collectionName": "components_about_page_brighter_tomorrows",
+  "info": {
+    "displayName": "brighterTomorrow"
+  },
+  "options": {},
+  "attributes": {
+    "image": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": false
+    },
+    "heading": {
+      "type": "component",
+      "repeatable": false,
+      "component": "common.heading-bar"
+    },
+    "mission": {
+      "type": "component",
+      "repeatable": true,
+      "component": "home-page.our-value"
+    },
+    "vision": {
+      "type": "component",
+      "repeatable": true,
+      "component": "home-page.our-value"
+    },
+    "description": {
+      "type": "text"
+    }
+  }
+}

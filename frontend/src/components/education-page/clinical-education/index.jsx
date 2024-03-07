@@ -1,0 +1,31 @@
+import React from "react";
+import GeneralClinic from "./general-clinic";
+import EducationCommunity from "./education-community";
+
+const ClinicalEducation = ({data, clinicalData}) => {
+  return (
+    <section className=" max-w-[1440px] mx-auto px-4 mt-[24px] sm:mt-[40px] md:mt-[55px] lg:mt-[75px] pb-[75px] pl-[40px] lg:pl-0">
+      <div className="my-[24px] max-w-[840px] mx-auto">
+        <h4 className="text-[#8F1A1D] text-[14px] leading-[16px] uppercase font-[400] ff-convergence pl-[20px] lg:pl-0">
+          {clinicalData?.tagline}
+        </h4>
+        <h2 className="text-[32px] sm:text-[36px] md:text-[40px] leading-[37px] sm:leading-[44px] md:leading-[47px] text-[#1D121C] font-[400] ff-convergence pt-[12px] pl-[20px] lg:pl-0">
+         {clinicalData?.title}
+        </h2>
+        <div className="bg-[#F3EAF6] p-[24px] mt-[24px] border-l-[2px] border-[#8F1A1D]">
+          <p className="text-[#111827] text-[16px] leading-[20px] ff-overpass italic uppercase opacity-[0.8]">
+           {clinicalData?.description}
+          </p>
+        </div>
+        <div className="mt-[24px]">
+          <GeneralClinic data={data} />
+        </div>
+        <div className="mt-[24px]">
+          <EducationCommunity data={data?.EducationAndCommunityCards}/>
+        </div>
+      </div>
+    </section>
+  );
+};
+
+export default ClinicalEducation;
